@@ -3,17 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Locação de Brinquedos</title>
+    <title>Loque Brinque</title>
+    <link href="https://fonts.googleapis.com/css2?family=Secular+One&family=Ubuntu:wght@400;500;700&display=swap"
+          rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!-- ESTILO ESSENCIAL -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css">
     <link rel="stylesheet" href="./assets/style.css">
-    
 </head>
 <body>
     <header>
-        <img src="./assets/img/Logo.jpg" alt="CADPOG" width="100">
-        <div class="logo">Brinquedos Divertidos</div>
+        <img src="./assets/img/Logo.jpg" alt="LoqueBrinque" width="100">
+        <div class="logo">Loque Brinque</div>
         <nav>
             <ul>
-                <li><a href="#sobre-nos">Sobre Nós</a></li>
+                <li><a href="#hero">Home</a></li>
                 <li><a href="#brinquedos">Brinquedos</a></li>
                 <li><a href="#como-funciona">Como Funciona</a></li>
                 <li><a href="#contato">Contato</a></li>
@@ -22,32 +28,30 @@
         <a href="#reserva" class="cta">Reserve Agora</a>
     </header>
 
-    <section class="hero">
+    <section class="hero" id="hero">
         <h1>Transforme Festas em Aventuras Inesquecíveis!</h1>
         <p>Locação de brinquedos que trazem diversão e alegria para qualquer ocasião.</p>
-        <a href="#brinquedos" class="cta">Veja Nossos Brinquedos</a>
     </section>
-
-    <section id="brinquedos">
-        <h2>Nossos Brinquedos</h2>
-        <div class="galeria">
-            <div class="brinquedo">
-                <img src="https://via.placeholder.com/150" alt="Brinquedo 1">
-                <h3>Brinquedo 1</h3>
-                <p>Para crianças de 3 a 7 anos. Diversão garantida!</p>
-                <a href="#reserva" class="cta">Reserve Agora</a>
-            </div>
-            <div class="brinquedo">
-                <img src="https://via.placeholder.com/150" alt="Brinquedo 2">
-                <h3>Brinquedo 2</h3>
-                <p>Para crianças de 5 a 10 anos. Incrível aventura!</p>
-                <a href="#reserva" class="cta">Reserve Agora</a>
-            </div>
-            <div class="brinquedo">
-                <img src="https://via.placeholder.com/150" alt="Brinquedo 3">
-                <h3>Brinquedo 3</h3>
-                <p>Para todas as idades. Diversão sem fim!</p>
-                <a href="#reserva" class="cta">Reserve Agora</a>
+    
+    <section id="brinquedos-container">
+        <div id="brinquedos">
+            <h2>Nossos Brinquedos</h2>
+            <div class="glide brinquedo">
+                <div class="glide__track" data-glide-el="track">
+                    <ul class="glide__slides">
+                        <li class="glide__slide">
+                            <img src="https://via.placeholder.com/150" alt="Brinquedo 1">
+                            <h3>Brinquedo 1</h3>
+                            <p>Para crianças de 3 a 7 anos. Diversão garantida!</p>
+                            <a href="#reserva" class="cta">Reserve Agora</a>
+                        </li>
+                        <!-- Adicione mais slides conforme necessário -->
+                    </ul>
+                </div>
+                <div class="glide__arrows" data-glide-el="controls">
+                    <button class="glide__arrow glide__arrow--left" data-glide-dir="<">&#10094;</button>
+                    <button class="glide__arrow glide__arrow--right" data-glide-dir=">">&#10095;</button>
+                </div>
             </div>
         </div>
     </section>
@@ -90,16 +94,20 @@
                 <div class="social-links">
                     <a href="https://www.facebook.com/cleber.weber.14" target="_blank">
                         <i class="fab fa-facebook-f"></i> Facebook
-                        
+                    </a>
                     <a href="https://www.instagram.com/loquebrinque01/" target="_blank">
                         <i class="fab fa-instagram"></i> Instagram
                     </a>
                 </div>
             </div>
             <div class="footer-info">
-                <p>&copy; 2024 CADPOG. Todos os direitos reservados.</p>
+                <p>&copy; 2024 Loque Brinque. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/glide.min.js"></script>
+    <script src="./assets/scripts/glide.js"></script>
+    <script src="./assets/scripts.js"></script>
+    
 </body>
 </html>
