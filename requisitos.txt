@@ -1,0 +1,69 @@
+Questionário de Requisitos para a Landing Page
+
+Informações Gerais
+
+1. Nome da Empresa:
+   - Qual é o nome completo da empresa?
+
+2. Descrição da Empresa:
+   - Como você descreveria sua empresa e seus serviços em uma frase?
+
+3. Objetivos da Landing Page:
+   - Qual é o principal objetivo da landing page? (Por exemplo: capturar leads, aumentar vendas, informar)
+
+Público-Alvo
+
+4. Público-Alvo:
+   - Quem são os principais clientes que a empresa atende? (Idade, localização, interesses, etc.)
+
+5. Problemas do Cliente:
+   - Quais problemas ou necessidades específicas a landing page deve abordar para seus clientes?
+
+Design e Estilo
+
+6. Estilo Visual:
+   - Existem exemplos de sites ou landing pages que você admira ou gostaria que fossem referência em termos de estilo?
+
+7. Paleta de Cores:
+   - Existem cores específicas que a marca utiliza ou que você gostaria de incorporar na página?
+
+8. Logo e Imagens:
+   - Você possui um logotipo e imagens específicas que devem ser utilizadas?
+
+9. Tipografia:
+   - Existem fontes específicas que você gostaria de usar na página?
+
+Funcionalidades e Conteúdo
+
+10. Seções Necessárias:
+    - Quais seções a página deve conter? (Por exemplo: Sobre Nós, Serviços, Testemunhos, Contato)
+
+11. Formulários:
+    - A página precisará de formulários? Em caso afirmativo, que informações eles devem coletar?
+
+12. Chamada para Ação (CTA):
+    - Qual é a ação principal que você quer que os visitantes façam? (Por exemplo: “Reserve Agora”, “Saiba Mais”)
+
+13. Integrações:
+    - Existem sistemas ou plataformas com as quais a página deve integrar? (Por exemplo: CRM, redes sociais, Google Analytics)
+
+Conteúdo e Mensagem
+
+14. Conteúdo:
+    - Quem será responsável por fornecer o conteúdo (textos, imagens, vídeos) para a página?
+
+15. Mensagem Principal:
+    - Qual é a mensagem chave que você quer comunicar aos visitantes?
+
+Cronograma e Orçamento
+
+16. Prazo de Entrega:
+    - Qual é a data desejada para a entrega da landing page?
+
+17. Orçamento:
+    - Existe um orçamento pré-definido para este projeto?
+
+Considerações Finais
+
+18. Outras Observações:
+    - Há mais alguma coisa que você gostaria de adicionar ou alguma consideração específica que deveríamos ter em mente?
