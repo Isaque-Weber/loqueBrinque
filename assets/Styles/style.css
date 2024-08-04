@@ -170,6 +170,15 @@ nav a:hover {
     text-align: center;
 }
 
+#como-funciona ol {
+    list-style-type: none; /* Remove o estilo da lista */
+    padding-left: 0; /* Remove o espaçamento padrão à esquerda */
+}
+
+#como-funciona li {
+    margin-bottom: 10px; /* Adiciona espaço entre os itens da lista */
+}
+
 #contato {
     padding: 40px 20px;
     background-color: var(--secondary-color);
