@@ -1,8 +1,9 @@
 :root {
     --primary-color: #ff634791; /* Cor principal para botões e destaques */
-    --secondary-color: #f8f8f8; /* Cor de fundo para o cabeçalho e rodapé */
+    --secondary-color: #ffffff; /* Cor de fundo para o cabeçalho e rodapé */
     --text-color: #333; /* Cor para texto */
     --box-shadow-color: rgba(0, 0, 0, 0.1); /* Cor para sombra do cabeçalho */
+    --background-secundary-color: #e9e9e9da;
 }
 
 body {
@@ -52,6 +53,16 @@ header {
 header img {
     margin-right: 10px;
     width: 100px; /* Ajuste o tamanho da imagem conforme necessário */
+}
+
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: auto;
+    color: var(--text-color);
 }
 
 .logo {
@@ -229,7 +240,7 @@ nav a:hover {
 
 #contato {
     padding: 40px 20px;
-    background-color: var(--secondary-color);
+    background-color: var(--background-secundary-color);
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     max-width: 500px;
@@ -290,7 +301,7 @@ form {
 
 footer {
     margin-top: 30px;
-    background-color: var(--secondary-color);
+    background-color: var(--background-secundary-color);
     padding: 40px 20px;
     text-align: center;
 }
@@ -338,6 +349,26 @@ footer {
 }
 
 @media (min-width: 768px) {
+
+    .cta {
+        display: inline-block; /* Exibe o botão normalmente em telas maiores */
+        margin-left: 20px; /* Mantém o espaçamento adequado */
+    }
+    
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+        position: static;
+        width: auto;
+        background-color: transparent;
+        padding: 0;
+    }
+    
+    .hamburger {
+        display: none; /* Esconde o ícone de hambúrguer em telas maiores */
+    }
+
     .container {
         flex-direction: row;
         justify-content: space-between;
@@ -362,6 +393,41 @@ footer {
 }
 
 @media (max-width: 768px) {
+
+    .cta {
+        width: 100%;
+        text-align: center;
+        margin: 10px 0; /* Adiciona espaçamento ao redor do botão no menu */
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        width: 100%;
+        background-color: var(--secondary-color);
+        position: absolute;
+        top: 60px; /* Ajuste para não sobrepor o cabeçalho */
+        left: 0;
+        padding: 10px 0;
+        padding-left: 0;
+        z-index: 999;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    header {
+        flex-direction: row;
+        align-items: center;
+    }
+
     header {
         flex-direction: column;
         align-items: flex-start;

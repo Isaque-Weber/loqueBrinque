@@ -21,3 +21,18 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
+const hamburger = document.getElementById('hamburger');
+    const closeMenu = document.getElementById('close-menu');
+    const menuItems = document.querySelector('nav ul');
+
+    hamburger.addEventListener('click', function () {
+        menuItems.classList.add('show');
+        hamburger.style.display = 'none';
+        closeMenu.style.display = 'block';
+    });
+
+    closeMenu.addEventListener('click', function () {
+        menuItems.classList.remove('show');
+        hamburger.style.display = 'block';
+        closeMenu.style.display = 'none';
+    });
