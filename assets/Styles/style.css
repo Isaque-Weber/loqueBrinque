@@ -55,12 +55,24 @@ header img {
 }
 
 .hamburger {
-    display: none;
+    display: block;
     background: none;
     border: none;
     font-size: 24px;
     cursor: pointer;
     margin-left: auto;
+    color: var(--text-color);
+}
+
+.close-menu {
+    display: none; /* Escondido inicialmente */
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 20px;
     color: var(--text-color);
 }
 
@@ -129,21 +141,18 @@ header img {
 
 nav ul {
     list-style: none;
-    display: flex;
+    display: none;
+    flex-direction: column;
     gap: 15px;
-    margin: 0;
-    padding: 0;
-}
-
-nav a {
-    text-decoration: none;
-    color: var(--text-color);
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-nav a:hover {
-    color: var(--primary-color); /* Cor de destaque ao passar o mouse */
+    position: fixed;
+    top: 0;
+    left: -100%; /* Inicia fora da tela */
+    width: 70%;
+    height: 100%;
+    background-color: var(--secondary-color);
+    padding: 20px;
+    z-index: 999;
+    transition: left 0.3s ease-in-out;
 }
 
 .cta {
@@ -157,7 +166,23 @@ nav a:hover {
 }
 
 .cta:hover {
-    background-color: rgb(255, 99, 71); /* Ajuste manual para o efeito de hover */
+    background-color: rgb(255, 99, 71);
+    color: white; /* Garante que a cor do texto não mude */
+}
+
+nav ul.show {
+    left: 0; /* Animação de entrada do menu */
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--primary-color); /* Cor de destaque ao passar o mouse */
 }
 
 .hero {
@@ -367,17 +392,19 @@ footer {
     }
     
     nav ul {
-        display: flex;
+        display: flex; /* Menu normal em telas maiores */
         flex-direction: row;
         gap: 15px;
         position: static;
         width: auto;
+        height: auto;
         background-color: transparent;
         padding: 0;
+        left: auto;
     }
     
-    .hamburger {
-        display: none; /* Esconde o ícone de hambúrguer em telas maiores */
+    .hamburger, .close-menu {
+        display: none; /* Esconde os botões em telas maiores */
     }
 
     .container {
@@ -434,6 +461,10 @@ footer {
         display: block;
     }
 
+    .close-menu {
+        display: block;
+    }
+
     header {
         flex-direction: row;
         align-items: center;
@@ -449,6 +480,10 @@ footer {
         gap: 10px;
         align-items: flex-start;
         padding-left: 0;
+    }
+
+    .logo {
+        display: none;
     }
 
     .cta {
