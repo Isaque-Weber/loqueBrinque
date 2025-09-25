@@ -1,539 +1,70 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: 0 0% 100%;
+    --foreground: 224 71.4% 4.1%;
+    --card: 0 0% 100%;
+    --card-foreground: 224 71.4% 4.1%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71.4% 4.1%;
+    --primary: 220.9 39.3% 11%;
+    --primary-foreground: 210 20% 98%;
+    --secondary: 220 14.3% 95.9%;
+    --secondary-foreground: 220.9 39.3% 11%;
+    --muted: 220 14.3% 95.9%;
+    --muted-foreground: 220 8.9% 46.1%;
+    --accent: 220 14.3% 95.9%;
+    --accent-foreground: 220.9 39.3% 11%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 20% 98%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 224 71.4% 4.1%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 224 71.4% 4.1%;
+    --foreground: 210 20% 98%;
+    --card: 224 71.4% 4.1%;
+    --card-foreground: 210 20% 98%;
+    --popover: 224 71.4% 4.1%;
+    --popover-foreground: 210 20% 98%;
+    --primary: 210 20% 98%;
+    --primary-foreground: 220.9 39.3% 11%;
+    --secondary: 215 27.9% 16.9%;
+    --secondary-foreground: 210 20% 98%;
+    --muted: 215 27.9% 16.9%;
+    --muted-foreground: 217.9 10.6% 64.9%;
+    --accent: 215 27.9% 16.9%;
+    --accent-foreground: 210 20% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 20% 98%;
+    --border: 215 27.9% 16.9%;
+    --input: 215 27.9% 16.9%;
+    --ring: 216 12.2% 83.9%;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@keyframes gradient-move {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+.animated-gradient {
+    background-size: 200% 200%;
+    animation: gradient-move 5s ease infinite;
 }
 
-:root {
-    --primary-color: #ff634791; /* Cor principal para botões e destaques */
-    --secondary-color: #ffffff; /* Cor de fundo para o cabeçalho e rodapé */
-    --text-color: #333; /* Cor para texto */
-    --box-shadow-color: rgba(0, 0, 0, 0.1); /* Cor para sombra do cabeçalho */
-}
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    margin-top: 80px; /* Ajuste conforme a altura do cabeçalho */
-    line-height: 1.6;
-    color: var(--text-color);
-    scrollbar-width: thin; /* Para Firefox: Torna a barra de rolagem mais fina */
-    scrollbar-color: rgba(0, 0, 0, 0.3) transparent; /* Para Firefox: Cor do polegar e fundo do trilho */
-}
-
-/* Estilização da barra de rolagem para navegadores Webkit */
-::-webkit-scrollbar {
-    width: 8px; /* Largura da barra de rolagem */
-}
-
-::-webkit-scrollbar-track {
-    background: transparent; /* Fundo do trilho da barra de rolagem */
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.3); /* Cor do polegar da barra de rolagem */
-    border-radius: 10px; /* Bordas arredondadas para um visual suave */
-    transition: background-color 0.3s ease;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(0, 0, 0, 0.5); /* Cor do polegar ao passar o mouse */
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: var(--secondary-color);
-    position: fixed;
-    top: 0;
-    width: 98%;
-    z-index: 1000;
-    box-shadow: 0 2px 5px var(--box-shadow-color);
-}
-
-header img {
-    margin-right: 10px;
-    width: 100px; /* Ajuste o tamanho da imagem conforme necessário */
-}
-
-.hamburger {
-    display: block;
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    margin-left: auto;
-    color: var(--text-color);
-}
-
-.close-menu {
-    display: none; /* Escondido inicialmente */
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    color: var(--text-color);
-}
-
-.logo {
-    font-size: 20px;
-    font-weight: bold;
-    margin-right: auto;
-    padding-left: 10px;
-}
-
-.brinquedo {
-    text-align: center;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background-color: var(--background-smoke);
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-}
-#brinquedos-container {
-    padding-top: 100px; /* Ajuste conforme necessário para compensar a altura do cabeçalho */
-}
-
-#brinquedos {
-    text-align: center;
-    margin: 0 auto;
-    max-width: 1200px; /* Ajuste o tamanho conforme necessário */
-    padding: 20px;
-}
-
-.glide__slide {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 10px;
-}
-
-.glide__slide img {
-    width: 150px;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 10px;
-}
-
-.glide__arrows {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin-top: 10px;
-}
-
-.glide__arrow {
-    background-color: var(--primary-color);
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 5px 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.glide__arrow:hover {
-    background-color: rgb(255, 99, 71); /* Ajuste manual para o efeito de hover */
-}
-
-nav ul {
-    list-style: none;
-    display: none; /* Inicialmente escondido */
-    flex-direction: column;
-    gap: 15px;
-    position: fixed;
-    top: 0;
-    left: -100%; /* Inicia fora da tela */
-    width: 70%;
-    height: 100%;
-    background-color: var(--secondary-color);
-    padding: 20px;
-    z-index: 999;
-    transition: left 0.3s ease-in-out;
-}
-
-.cta {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-left: 20px;
-    transition: background-color 0.3s ease;
-}
-
-.cta:hover {
-    background-color: rgb(255, 99, 71);
-    color: white; /* Garante que a cor do texto não mude */
-}
-
-nav ul.show {
-    left: 0; /* Quando a classe show é aplicada, o menu é trazido para dentro da tela */
-    display: flex; /* Certifica-se de que ele está visível */
-}
-
-nav a {
-    text-decoration: none;
-    color: var(--text-color);
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-nav a:hover {
-    color: var(--primary-color); /* Cor de destaque ao passar o mouse */
-}
-
-.hero {
-    position: relative;
-    color: white;
-    text-align: center;
-    padding: 100px 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 400px; /* Altura mínima para a seção */
-    overflow: hidden; /* Para cortar o pseudo-elemento caso saia da borda */
-}
-
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('/assets/img/Pula-pula.jpg'); /* Caminho da imagem de fundo */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    filter: blur(1.5px); /* Nível de desfoque */
-    z-index: -1; /* Coloca o pseudo-elemento atrás do conteúdo */
-}
-
-.hero h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra de texto para legibilidade */
-}
-
-.hero p {
-    font-size: 1.2em;
-    margin-bottom: 30px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Sombra de texto para legibilidade */
-}
-
-.hero .cta {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 15px 30px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    position: relative;
-    z-index: 1; /* Assegura que o botão esteja acima do blur */
-}
-
-.hero .cta:hover {
-    background-color: rgba(255, 99, 71, 0.8); /* Cor ao passar o mouse */
-}
-
-.galeria {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    padding: 20px;
-}
-
-#como-funciona, #depoimentos, #contato {
-    padding: 40px 20px;
-    text-align: center;
-}
-
-#como-funciona ol {
-    list-style-type: none; /* Remove o estilo da lista */
-    padding-left: 0; /* Remove o espaçamento padrão à esquerda */
-}
-
-#como-funciona li {
-    margin-bottom: 10px; /* Adiciona espaço entre os itens da lista */
-}
-
-#contato {
-    padding: 40px 20px;
-    background-color: var(--secondary-color);
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    max-width: 500px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-#contato h2 {
-    margin-bottom: 20px;
-    font-size: 1.8em;
-}
-
-input[type="text"],
-input[type="email"],
-textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    transition: border-color 0.3s ease;
-}
-
-input[type="text"]:focus,
-input[type="email"]:focus,
-textarea:focus {
-    border-color: var(--primary-color);
-    outline: none;
-    box-shadow: 0 0 5px rgba(255, 99, 71, 0.3);
-}
-
-textarea {
-    resize: vertical;
-    min-height: 100px;
-}
-
-button[type="submit"] {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-button[type="submit"]:hover {
-    background-color: rgba(255, 99, 71, 0.8);
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    background-color: var(--background-smoke);
-}
-
-input[type="text"], input[type="email"], textarea {
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    width: 94.7%;
-}
-
-footer {
-    margin-top: 30px;
-    background-color: var(--secondary-color);
-    padding: 40px 20px;
-    text-align: center;
-}
-
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.footer-logo img {
-    margin-bottom: 20px;
-}
-
-.footer-social {
-    margin-bottom: 20px;
-}
-
-.footer-social h2 {
-    margin-bottom: 10px;
-    font-size: 1.2em;
-}
-
-.social-links {
-    display: flex;
-    gap: 15px;
-}
-
-.social-links a {
-    text-decoration: none;
-    color: var(--text-color);
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-.social-links a:hover {
-    color: var(--primary-color);
-}
-
-.footer-info p {
-    margin-top: 10px;
-    font-size: 0.9em;
-}
-
-@media (min-width: 768px) {
-
-    .cta {
-        display: inline-block; /* Exibe o botão normalmente em telas maiores */
-        margin-left: 20px; /* Mantém o espaçamento adequado */
-    }
-    
-    nav ul {
-        display: flex; /* Menu normal em telas maiores */
-        flex-direction: row;
-        gap: 15px;
-        position: static;
-        width: auto;
-        height: auto;
-        background-color: transparent;
-        padding: 0;
-        left: auto;
-    }
-    
-    .hamburger, .close-menu {
-        display: none; /* Esconde os botões em telas maiores */
-    }
-
-    .container {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .footer-logo, .footer-social, .footer-info {
-        margin-bottom: 0;
-    }
-
-    .hero {
-        padding: 80px 15px;
-    }
-
-    .hero h1 {
-        font-size: 2em;
-    }
-
-    .hero p {
-        font-size: 1em;
-    }
-}
-
-@media (max-width: 768px) {
-
-    .cta {
-        width: 100%;
-        text-align: center;
-        margin: 10px 0; /* Adiciona espaçamento ao redor do botão no menu */
-    }
-
-    nav ul {
-        display: none;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-        width: 100%;
-        background-color: var(--secondary-color);
-        position: absolute;
-        top: 60px; /* Ajuste para não sobrepor o cabeçalho */
-        left: 0;
-        padding: 10px 0;
-        padding-left: 0;
-        z-index: 999;
-    }
-
-    nav ul.show {
-        left: 0; /* Quando a classe show é aplicada, o menu é trazido para dentro da tela */
-        display: flex; /* Certifica-se de que ele está visível */
-    }
-
-    .hamburger {
-        display: block;
-    }
-
-    .close-menu {
-        display: block;
-    }
-
-    header {
-        flex-direction: row;
-        align-items: center;
-    }
-
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-        align-items: flex-start;
-        padding-left: 0;
-    }
-
-    .logo {
-        display: none;
-    }
-
-    .cta {
-        margin-left: 0;
-        margin-top: 10px;
-    }
-
-    .container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .hero {
-        padding: 80px 15px;
-    }
-
-    .hero h1 {
-        font-size: 2em;
-    }
-
-    .hero p {
-        font-size: 1em;
-    }
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
 }
