@@ -11,7 +11,7 @@ const Depoimentos = () => {
     return (
         <section id="depoimentos" className="relative bg-blue-400">
             <div className="max-w-6xl mx-auto px-6 py-20 text-center relative z-10 text-white">
-                <h2 className={`text-4xl text-red-600 font-medium mb-12 ${sniglet.className}`}>
+                <h2 className={`text-4xl text-red-900 font-medium mb-12 ${sniglet.className}`}>
                     O que nossos clientes dizem
                 </h2>
 

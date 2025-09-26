@@ -3,21 +3,20 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/app/components/ui/button";
 import {
     NavigationMenu,
     NavigationMenuItem,
     NavigationMenuLink,
     NavigationMenuList,
-} from "@/components/ui/navigation-menu";
+} from "@/app/components/ui/navigation-menu";
 import {
     Sheet,
     SheetContent,
-    SheetDescription,
     SheetHeader,
     SheetTitle,
     SheetTrigger,
-} from "@/components/ui/sheet";
+} from "@/app/components/ui/sheet";
 import { Menu } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { sniglet } from "@/lib/fonts";
@@ -28,7 +27,7 @@ const Header = () => {
 
     const navItems = [
         { href: "/brinquedos", label: "Brinquedos" },
-        { href: "/como-funciona", label: "Como Funciona" },
+        // { href: "/como-funciona", label: "Como Funciona" },
         { href: "/contato", label: "Contato" },
     ];
 
@@ -57,8 +56,11 @@ const Header = () => {
                                 <NavigationMenuLink asChild>
                                     <Link
                                         href={item.href}
-                                        className={`font-medium transition-colors hover:text-blue-600 ${
-                                            pathname === item.href ? "text-blue-600 underline" : "text-gray-700"
+                                        className={`font-medium px-3 py-2 rounded-md transition-all duration-200
+    ${
+                                            pathname === item.href
+                                                ? "bg-sky-600 text-white shadow"
+                                                : "text-gray-800 hover:bg-blue-100 hover:text-sky-600"
                                         }`}
                                     >
                                         {item.label}
@@ -89,7 +91,6 @@ const Header = () => {
                   </span>
                                 </Link>
                             </SheetTitle>
-                            <SheetDescription>Navegue pelas opções.</SheetDescription>
                         </SheetHeader>
 
                         <nav className="flex flex-col gap-4 mt-8">
