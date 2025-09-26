@@ -1,13 +1,11 @@
 import Image from "next/image";
 import { Button } from "@/app/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/app/components/ui/card";
-import Link from "next/link";
-import {Span} from "next/dist/server/lib/trace/tracer";
 
 const brinquedos = [
     {
         nome: "Pula-pula (Cama Elástica)",
-        img: "/pula-pula.jpg",
+        img: "/Pula-pula.jpg",
     },
     {
         nome: "Touro Mecânico",
