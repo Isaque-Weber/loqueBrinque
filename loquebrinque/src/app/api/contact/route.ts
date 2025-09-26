@@ -1,9 +1,14 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
-// você pode colocar seu logo SVG inline aqui ou importar
+interface ContactData {
+    name: string;
+    email: string;
+    phone: string;
+    message: string;
+}
 // exemplo: string com o SVG
-function emailTemplateInterno({ name, email, phone, message }: any) {
+function emailTemplateInterno({ name, email, phone, message }: ContactData) {
     return `
   <div style="font-family: Arial, sans-serif; background:#f0f9ff; padding:20px; border-radius:12px;">
     <div style="text-align:center; margin-bottom:20px;">
@@ -23,7 +28,7 @@ function emailTemplateInterno({ name, email, phone, message }: any) {
   `;
 }
 
-function emailTemplateCliente({ name }: any) {
+function emailTemplateCliente({ name }: {name: string;}) {
     return `
   <div style="font-family: Arial, sans-serif; background:#fff7ed; padding:20px; border-radius:12px;">
     <div style="text-align:center; margin-bottom:20px;">
