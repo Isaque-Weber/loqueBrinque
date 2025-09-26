@@ -4,7 +4,7 @@ import {sniglet} from "@/lib/fonts";
 
 const Hero = () => {
     return (
-        <section className="relative w-full py-20 md:py-32 lg:py-40 bg-blue-400 overflow-hidden">
+        <section className="relative w-full py-20 md:py-32 lg:py-40 bg-gradient-to-b from-orange-50 to-blue-400 overflow-hidden">
             <div className="container px-4 md:px-6 flex flex-col-reverse md:flex-row items-center gap-10">
 
                 {/* Textos */}
