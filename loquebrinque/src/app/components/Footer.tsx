@@ -43,7 +43,7 @@ const Footer = () => {
                         <Phone className="h-5 w-5 text-sky-600" /> (21) 99925-8985
                     </p>
                     <p className="flex items-center gap-2">
-                        <Mail className="h-5 w-5 text-sky-600" /> contato@loquebrinque.com
+                        <Mail className="h-5 w-5 text-sky-600" /> loquebrinque.2011@gmail.com
                     </p>
 
                     <div className="flex gap-4 mt-4">
