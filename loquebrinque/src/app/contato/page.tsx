@@ -106,7 +106,7 @@ export default function ContatoPage() {
 
                         <div className="mt-6">
                             <a
-                                href={`https://wa.me/5521964485810?text=${encodeURIComponent(
+                                href={`https://wa.me/5521999258985?text=${encodeURIComponent(
                                     "Olá! Gostaria de saber mais informações sobre os brinquedos disponíveis para minha festa 🎪🎉"
                                 )}`}
                                 target="_blank"

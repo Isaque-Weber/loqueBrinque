@@ -41,7 +41,7 @@ function emailTemplateCliente({ name }: {name: string;}) {
     <p>Recebemos sua mensagem e em breve nossa equipe entrará em contato com você.</p>
     <p>Enquanto isso, sinta-se à vontade para explorar nossos brinquedos no site ou falar conosco diretamente no WhatsApp.</p>
     <div style="text-align:center; margin:20px 0;">
-      <a href="https://wa.me/5521964485810?text=Olá! Gostaria de mais informações sobre os brinquedos 🎪"
+      <a href="https://wa.me/5521999258985?text=Olá! Gostaria de mais informações sobre os brinquedos 🎪"
         style="background:#22c55e; color:white; padding:12px 20px; border-radius:999px; text-decoration:none; font-weight:bold;">
         💬 Falar no WhatsApp
       </a>

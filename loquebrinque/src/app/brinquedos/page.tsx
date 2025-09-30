@@ -81,7 +81,7 @@ export default function BrinquedosPage() {
                                 {/*)}*/}
 
                                 <a
-                                    href={`https://wa.me/5521964485810?text=${encodeURIComponent(
+                                    href={`https://wa.me/5521999258985?text=${encodeURIComponent(
                                         `Olá! Gostaria de reservar o brinquedo: ${b.nome}.`
                                     )}`}
                                     target="_blank"

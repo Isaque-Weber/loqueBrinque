@@ -40,7 +40,7 @@ const Footer = () => {
                         Fale Conosco
                     </h3>
                     <p className="flex items-center gap-2">
-                        <Phone className="h-5 w-5 text-sky-600" /> (21) 96448-5810
+                        <Phone className="h-5 w-5 text-sky-600" /> (21) 99925-8985
                     </p>
                     <p className="flex items-center gap-2">
                         <Mail className="h-5 w-5 text-sky-600" /> contato@loquebrinque.com
@@ -55,7 +55,7 @@ const Footer = () => {
                               className="w-10 h-10 flex items-center justify-center rounded-full bg-orange-100 shadow hover:bg-red-100 transition-colors">
                             <Instagram className="h-5 w-5 text-sky-600" />
                         </Link>
-                        <Link href="https://wa.me/5521964485810" target="_blank" rel="noopener noreferrer"
+                        <Link href="https://wa.me/5521999258985" target="_blank" rel="noopener noreferrer"
                               className="w-10 h-10 flex items-center justify-center rounded-full bg-orange-100 shadow hover:bg-red-100 transition-colors">
                             <WhatsAppIcon className="h-5 w-5 text-sky-600" />
                         </Link>

@@ -38,7 +38,9 @@ const Contato = () => {
 
                 {/* Botão WhatsApp */}
                 <a
-                    href="https://wa.me/5599999999999"
+                    href={`https://wa.me/5521999258985?text=${encodeURIComponent(
+                        "Olá! Gostaria de saber mais informações sobre os brinquedos disponíveis para minha festa 🎪🎉"
+                    )}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="mt-6 inline-block bg-green-500 text-white px-6 py-3 rounded-md hover:bg-green-600 transition"
