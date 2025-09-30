@@ -35,7 +35,7 @@ const steps = [
 
 const ComoFunciona = () => {
     return (
-        <section className="py-16 md:py-24 lg:py-32 bg-gradient-to-b from-blue-400 to-white relative overflow-hidden">
+        <section id={"como-funciona"} className="py-16 md:py-24 lg:py-32 bg-gradient-to-b from-blue-400 to-white relative overflow-hidden">
             <div className="container px-4 md:px-6 text-center relative z-10">
                 <h2 className="text-4xl md:text-5xl font-extrabold mb-12 text-sky-900 drop-shadow-lg">
                     ✨ Como Funciona? ✨

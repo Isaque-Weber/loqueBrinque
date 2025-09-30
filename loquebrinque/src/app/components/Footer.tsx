@@ -28,10 +28,10 @@ const Footer = () => {
                     <h3 className={`font-medium text-lg text-sky-700 mb-2 ${sniglet.className}`}>
                         Navegação
                     </h3>
-                    <Link href="/#brinquedos" className="hover:text-sky-600">Brinquedos</Link>
+                    <Link href="/brinquedos" className="hover:text-sky-600">Brinquedos</Link>
                     <Link href="/#como-funciona" className="hover:text-sky-600">Como Funciona</Link>
                     {/*<Link href="/#depoimentos" className="hover:text-sky-600">Depoimentos</Link>*/}
-                    <Link href="/#contato" className="hover:text-sky-600">Contato</Link>
+                    <Link href="/contato" className="hover:text-sky-600">Contato</Link>
                 </div>
 
                 {/* Contato + redes sociais */}
