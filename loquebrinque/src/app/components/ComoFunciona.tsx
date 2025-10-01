@@ -71,7 +71,7 @@ const ComoFunciona = () => {
                         )}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center gap-3 rounded-full bg-green-500 px-8 py-4 text-lg font-bold text-white shadow-lg hover:bg-green-600 transition-transform hover:scale-105"
+                        className="inline-flex items-center justify-center gap-3 rounded-full bg-gradient-to-r from-green-500 via-green-600 to-emerald-600 hover:from-green-600 hover:via-green-700 hover:to-emerald-700 px-8 py-4 text-lg font-bold text-white shadow-lg hover:bg-green-600 transition-transform hover:scale-105"
                     >
                         <WhatsAppIcon className="h-7 w-7" />
                         Fale com um especialista e monte sua festa!

@@ -111,7 +111,7 @@ export default function ContatoPage() {
                                 )}`}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex w-full h-14 items-center justify-center gap-3 rounded-full bg-green-500 px-6 text-lg font-semibold text-white shadow-lg hover:bg-green-600 transition-transform hover:scale-105"
+                                className="inline-flex w-full h-14 items-center justify-center gap-3 rounded-full bg-gradient-to-r from-green-500 via-green-600 to-emerald-600 hover:from-green-600 hover:via-green-700 hover:to-emerald-700 px-6 text-lg font-semibold text-white shadow-lg hover:bg-green-600 transition-transform hover:scale-105"
                             >
                                 <WhatsAppIcon className="h-6 w-6" />
                                 Fale no WhatsApp
