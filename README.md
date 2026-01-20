@@ -1,40 +1,54 @@
-# Loque Brinque
+# Loque Brinque 🎪
 
-Landing page para divulgação de aluguel de brinquedos.
+**Loque Brinque** é uma landing page moderna e interativa desenvolvida para facilitar a divulgação e o aluguel de brinquedos para festas e eventos.
 
-Este é um projeto [Next.js](https://nextjs.org) inicializado com [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+O projeto oferece um catálogo visual atraente, onde os clientes podem visualizar fotos detalhadas dos brinquedos e entrar em contato diretamente via WhatsApp para realizar reservas.
 
-## Começando
+## ✨ Funcionalidades
 
-Primeiro, execute o servidor de desenvolvimento:
+- **Catálogo Visual**: Apresentação clara dos brinquedos com cards interativos.
+- **Galeria de Fotos**: Modal com carrossel de imagens para visualizar detalhes de cada brinquedo.
+- **Reservas via WhatsApp**: Botão de ação (CTA) que direciona o cliente para uma conversa no WhatsApp já com a mensagem de reserva preenchida.
+- **Interface Responsiva**: Design adaptável para celulares, tablets e desktops.
+- **Experiência Premium**: Animações suaves, gradientes e layout focado na conversão.
 
-```bash
-npm run dev
-# ou
-yarn dev
-# ou
-pnpm dev
-# ou
-bun dev
-```
+## 🚀 Tecnologias Utilizadas
 
-Abra [http://localhost:3000](http://localhost:3000) no seu navegador para ver o resultado.
+Este projeto foi desenvolvido com as seguintes tecnologias modernas:
 
-Você pode começar a editar a página modificando `app/page.tsx`. A página é atualizada automaticamente conforme você edita o arquivo.
+- [Next.js](https://nextjs.org/) - Framework React para produção.
+- [TypeScript](https://www.typescriptlang.org/) - Tipagem estática para maior segurança e produtividade.
+- [Tailwind CSS](https://tailwindcss.com/) - Estilização utilitária rápida e flexível.
+- [Shadcn UI](https://ui.shadcn.com/) - Componentes de interface reutilizáveis e acessíveis.
+- [Lucide React](https://lucide.dev/) - Ícones leves e consistentes.
 
-Este projeto usa [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) para otimizar e carregar automaticamente [Geist](https://vercel.com/font), uma nova família de fontes da Vercel.
+## 🛠️ Como Rodar o Projeto
 
-## Saiba Mais
+Para rodar o projeto localmente em sua máquina:
 
-Para saber mais sobre o Next.js, confira os seguintes recursos:
+1. **Clone o repositório:**
+   ```bash
+   git clone https://github.com/seu-usuario/loqueBrinque.git
+   cd loqueBrinque
+   ```
 
-- [Documentação do Next.js](https://nextjs.org/docs) - aprenda sobre os recursos e a API do Next.js.
-- [Aprenda Next.js](https://nextjs.org/learn) - um tutorial interativo de Next.js.
+2. **Instale as dependências:**
+   ```bash
+   npm install
+   # ou
+   yarn
+   # ou
+   pnpm install
+   ```
 
-Você pode conferir [o repositório do Next.js no GitHub](https://github.com/vercel/next.js) - seu feedback e contribuições são bem-vindos!
+3. **Inicie o servidor de desenvolvimento:**
+   ```bash
+   npm run dev
+   ```
 
-## Implantar na Vercel
+4. **Acesse:**
+   Abra [http://localhost:3000](http://localhost:3000) no seu navegador para ver o resultado.
 
-A maneira mais fácil de implantar seu aplicativo Next.js é usar a [Plataforma Vercel](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) dos criadores do Next.js.
+---
 
-Confira nossa [documentação de implantação do Next.js](https://nextjs.org/docs/app/building-your-application/deploying) para mais detalhes.
+Desenvolvido para **Loque Brinque** - Levando alegria para sua festa! 🎉
