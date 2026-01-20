@@ -38,7 +38,7 @@ const brinquedos = [
     { nome: "Pula-pula (Cama Elástica)", images: ["/Pula-pula.jpg", "/Pula-pula.jpg"] },
     { nome: "Touro Mecânico", images: ["/touro-mecanico.jpg", "/touro-mecanico.jpg"] },
     { nome: "Tobogã Inflável", images: ["/Tobogã.jpg", "/Tobogã.jpg"] },
-    { nome: "Piscina de Bolinhas", images: ["/pool-bol.jpg", "/kid-pool-bol.jpg"] },
+    // { nome: "Piscina de Bolinhas", images: ["/pool-bol.jpg", "/kid-pool-bol.jpg"] },
     { nome: "Futebol de Sabão Inflável", images: ["/futebol-de-sabao.webp", "/futebol-de-sabao.webp"] },
     { nome: "Guerra de Cotonete Inflável", images: ["/cotonete.webp", "/cotonete.webp"] },
     { nome: "Totó", images: ["/pebolim.jpg", "/pebolim.jpg"] },
@@ -137,18 +137,18 @@ export default function BrinquedosPage() {
             </span>
                     </h2>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
+                    <div className="flex flex-wrap justify-center gap-10">
                         {brinquedos.map((b, i) => (
                             <Dialog key={i}>
                                 <DialogTrigger asChild>
-                                    <Card className="flex flex-col overflow-hidden rounded-3xl bg-orange-500 shadow-xl hover:scale-105 transition-transform cursor-pointer">
+                                    <Card className="flex flex-col w-full max-w-sm overflow-hidden rounded-3xl bg-orange-500 shadow-xl hover:scale-105 transition-transform cursor-pointer">
                                         <CardHeader className="p-0">
                                             <Image
                                                 src={b.images[0]}
                                                 alt={b.nome}
                                                 width={400}
                                                 height={300}
-                                                className="w-full h-48 object-cover rounded-t-3xl"
+                                                className="w-full aspect-[4/3] object-cover rounded-t-3xl"
                                             />
                                         </CardHeader>
                                         <CardContent className="p-6 flex flex-col flex-1 items-center justify-between">

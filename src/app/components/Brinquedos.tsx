@@ -13,10 +13,10 @@ const brinquedos = [
         nome: "Tobogã Inflável",
         img: "/tobogã.jpg",
     },
-    {
-        nome: "Piscina de Bolinhas",
-        img: "/pool-bol.jpg",
-    },
+    // {
+    //     nome: "Piscina de Bolinhas",
+    //     img: "/pool-bol.jpg",
+    // },
     {
         nome: "Futebol de Sabão Inflável",
         img: "https://img.freepik.com/fotos-gratis/criancas-brincando-no-campo-de-futebol-inflavel-com-agua_23-2149876543.jpg",
